@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-INDENT_CONTENT = ' ' * 6
+INDENT_CONTENT = ' ' * 8
 LAYOUT_FILENAME = 'page_layout.html'
 PAGES = {
   'index.html' => 'index.html',
-  'websites.html' => 'websites/index.html',
   'software.html' => 'software/index.html',
   'learn_to_code.html' => 'learn_to_code/index.html',
+  'contact.html' => 'contact/index.html',
 }
 
 layout = File.read("src/#{LAYOUT_FILENAME}")
