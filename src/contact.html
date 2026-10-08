@@ -1,0 +1,55 @@
+<h1>Contact me</h1>
+<p class="notification" style="display: none;">
+  Thank you for your message.
+  <svg class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 6L6 18" stroke="#222255" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M6 6L18 18" stroke="#222255" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</p>
+<script>
+  notification = document.querySelector('.notification');
+
+  if (location.hash === '#thank-you') notification.style.display = 'block';
+
+  notification.querySelector('.close').addEventListener(
+    'click',
+    function() {
+      notification.style.display = 'none';
+      location.hash = '';
+    }
+  );
+</script>
+
+<form class="contact-form" action="https://api.staticforms.dev/submit" method="POST">
+
+  <div class="two-columns">
+    <p>
+      <label for="contact-name">Name:</label>
+      <br />
+      <input type="text" id="contact-name" name="name" required />
+    </p>
+
+    <p>
+      <label for="contact-email">Email:</label>
+      <br />
+      <input type="email" id="contact-email" name="email" required />
+    </p>
+  </div>
+
+  <p>
+    <label for="contact-message">Message:</label>
+    <br />
+    <textarea id="contact-message" name="message" rows="6" required></textarea>
+  </p>
+
+  <input type="hidden" name="apiKey" value="sf_lh960c66g3245knh2hligl23" />
+  <input class="redirect-to" type="hidden" name="redirectTo" value="" />
+  <script>
+    document.querySelector('.redirect-to').value =
+      location.protocol + '//' + location.host + '/contact/#thank-you';
+  </script>
+
+  <p class="submit-button">
+    <button type="submit">Send Message</button>
+  </p>
+</form>

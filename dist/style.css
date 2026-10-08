@@ -22,6 +22,11 @@ html, body {
   color: #106000;
 }
 
+.header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navigation a {
   color: #196310;
   margin: 0 0.9rem;
@@ -36,6 +41,70 @@ html, body {
 .navigation a.active {
   color: #095300;
   text-decoration: underline;
+}
+
+.content {
+  max-width: 675px;
+  width: 95%;
+  margin: 0 auto;
+  color: #222277;
+}
+
+.two-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form textarea, input[type="email"], input[type="text"] {
+  width: 100%;
+  border: 3px solid #222277;
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 4px;
+  color: #112a11;
+  background-color: transparent;
+}
+
+.contact-form .submit-button {
+  text-align: right;
+}
+
+.contact-form button {
+  font-size: 18px;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  color: #c0efff;
+  background-color: #222277;
+  cursor: pointer;
+}
+
+.notification {
+  display: none;
+  width: fit-content;
+  background: #af58ff;
+  color: #222255;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notification .close {
+  margin-left: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 @media (max-width: 652px) {

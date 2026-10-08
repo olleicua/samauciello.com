@@ -1,25 +1,12 @@
 #!/usr/bin/env ruby
 
-INDENT_CONTENT = ' ' * 8
-LAYOUT_FILENAME = 'page_layout.html'
-PAGES = {
-  'index.html' => 'index.html',
-  'software.html' => 'software/index.html',
-  'learn_to_code.html' => 'learn_to_code/index.html',
-  'contact.html' => 'contact/index.html',
-}
+require_relative '../../lib/build_utils.rb'
 
-layout = File.read("src/#{LAYOUT_FILENAME}")
-
-puts "building"
-PAGES.each do |src_filename, dist_filename|
-  puts "dist/#{dist_filename}"
-
-  src = File.read("src/#{src_filename}")
-  indented_src = src.lines.map do |line|
-    line == "\n" ? line : "#{INDENT_CONTENT}#{line}"
-  end.join('')
-
-  dist = layout.sub("{{CONTENT}}\n", indented_src)
-  File.write("dist/#{dist_filename}", dist)
-end
+build_pages indent_content_with_spaces: 8,
+            pages: [
+              :index,
+              :learn_to_code,
+              :software,
+              :websites,
+              :contact,
+            ]
