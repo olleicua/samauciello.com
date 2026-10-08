@@ -10,7 +10,7 @@ html, body {
 }
 
 .header {
-  background-color: #00bfff;
+  background-color: #5abfff;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
   text-align: center;
@@ -18,8 +18,8 @@ html, body {
 
 .header h1 {
   margin: 0 auto 0.4rem;
-  background-color: #00bfff;
-  color: #106000;
+  background-color: #5abfff;
+  color: #0e5000;
 }
 
 .header h1 a {
@@ -28,18 +28,18 @@ html, body {
 }
 
 .navigation a {
-  color: #196310;
+  color: #165310;
   margin: 0 0.9rem;
   text-decoration: none;
   font-weight: bold;
 }
 
 .navigation a:hover {
-  color: #095300;
+  color: #074300;
 }
 
 .navigation a.active {
-  color: #095300;
+  color: #074300;
   text-decoration: underline;
 }
 
